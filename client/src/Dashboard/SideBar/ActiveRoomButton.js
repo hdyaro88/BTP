@@ -17,7 +17,7 @@ const ActiveRoomButton = ({
   };
 
   const activeRoomButtonDisabled = amountOfParticipants > 3;
-  const roomTitle = `Cretor: ${creatorUsername}. Connected: ${amountOfParticipants}`;
+  const roomTitle = `Creator: ${creatorUsername}. Connected: ${amountOfParticipants}`;
 
   return (
     <Tooltip title={roomTitle}>
