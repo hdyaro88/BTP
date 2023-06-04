@@ -36,13 +36,8 @@ const InputWithLabel = (props) => {
 
   return (
     <Wrapper>
-      <Label>{label}</Label>
-      <Input
-        value={value}
-        onChange={handleValueChange}
-        type={type}
-        placeholder={placeholder}
-      />
+      <Label style={{ color: "#ffffff" }}>{label}</Label>
+      <Input color="#6c44fc" style={{ backgroundColor: "#ffffff", color: "#6c44fc" }} value={value} onChange={handleValueChange} type={type} placeholder={placeholder} />
     </Wrapper>
   );
 };

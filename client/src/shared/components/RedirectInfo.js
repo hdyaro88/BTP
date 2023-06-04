@@ -8,18 +8,9 @@ const RedirectText = styled("span")({
   cursor: "pointer",
 });
 
-const RedirectInfo = ({
-  text,
-  redirectText,
-  additionalStyles,
-  redirectHandler,
-}) => {
+const RedirectInfo = ({ text, redirectText, additionalStyles, redirectHandler }) => {
   return (
-    <Typography
-      sx={{ color: "#72767d" }}
-      style={additionalStyles ? additionalStyles : {}}
-      variant="subtitle2"
-    >
+    <Typography sx={{ color: "#72767d" }} style={additionalStyles ? additionalStyles : {}} variant="subtitle2">
       {text}
       <RedirectText onClick={redirectHandler}>{redirectText}</RedirectText>
     </Typography>

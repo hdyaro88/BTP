@@ -12,10 +12,10 @@ const MainContainer = styled("div")({
 });
 
 const Input = styled("input")({
-  backgroundColor: "#2f3136",
+  backgroundColor: "#ffffff",
   width: "98%",
   height: "44px",
-  color: "white",
+  color: "black",
   border: "none",
   borderRadius: "8px",
   fontSize: "14px",
@@ -47,12 +47,7 @@ const NewMessageInput = ({ chosenChatDetails }) => {
 
   return (
     <MainContainer>
-      <Input
-        placeholder={`Write message to ${chosenChatDetails.name}`}
-        value={message}
-        onChange={handleMessageValueChange}
-        onKeyDown={handleKeyPressed}
-      />
+      <Input placeholder={`Write message to ${chosenChatDetails.name}`} value={message} onChange={handleMessageValueChange} onKeyDown={handleKeyPressed} />
     </MainContainer>
   );
 };

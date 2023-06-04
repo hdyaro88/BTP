@@ -11,11 +11,7 @@ import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
 import { connect } from "react-redux";
 import { getActions } from "../../store/actions/friendsActions";
 
-const AddFriendDialog = ({
-  isDialogOpen,
-  closeDialogHandler,
-  sendFriendInvitation = () => {},
-}) => {
+const AddFriendDialog = ({ isDialogOpen, closeDialogHandler, sendFriendInvitation = () => {} }) => {
   const [mail, setMail] = useState("");
   const [isFormValid, setIsFormValid] = useState("");
 
@@ -40,24 +36,16 @@ const AddFriendDialog = ({
   return (
     <div>
       <Dialog open={isDialogOpen} onClose={handleCloseDialog}>
-        <DialogTitle>
-          <Typography>Invite a Friend</Typography>
+        <DialogTitle style={{ background: "#6c44fc" }}>
+          <Typography color="#ffffff">Invite a Friend</Typography>
         </DialogTitle>
-        <DialogContent>
+        <DialogContent style={{ background: "#6c44fc", color: "#ffffff" }}>
           <DialogContentText>
-            <Typography>
-              Enter e-mail address of friend which you would like to invite
-            </Typography>
+            <Typography color="#ffffff">Enter e-mail address of friend which you would like to invite</Typography>
           </DialogContentText>
-          <InputWithLabel
-            label="Mail"
-            type="text"
-            value={mail}
-            setValue={setMail}
-            placeholder="Enter mail address"
-          />
+          <InputWithLabel label="Mail"  type="text" value={mail} setValue={setMail} placeholder="Enter mail address" />
         </DialogContent>
-        <DialogActions>
+        <DialogActions style={{ background: "#6c44fc" }}>
           <CustomPrimaryButton
             onClick={handleSendInvitation}
             disabled={!isFormValid}
@@ -66,6 +54,8 @@ const AddFriendDialog = ({
               marginLeft: "15px",
               marginRight: "15px",
               marginBottom: "10px",
+              backgroundColor: "#ffffff",
+              color: "#6c44fc",
             }}
           />
         </DialogActions>

@@ -11,22 +11,16 @@ const MainContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  backgroundColor: "#202225",
+  backgroundColor: "#ffffff",
 });
 
 const SideBar = ({ activeRooms, isUserInRoom }) => {
   return (
     <MainContainer>
-      <MainPageButton />
-      {/* <CreateRoomButton isUserInRoom={isUserInRoom} /> */}
+      <MainPageButton  />
+      <CreateRoomButton isUserInRoom={isUserInRoom} />
       {activeRooms.map((room) => (
-        <ActiveRoomButton
-          roomId={room.roomId}
-          creatorUsername={room.creatorUsername}
-          amountOfParticipants={room.participants.length}
-          key={room.roomId}
-          isUserInRoom={isUserInRoom}
-        />
+        <ActiveRoomButton roomId={room.roomId} creatorUsername={room.creatorUsername} amountOfParticipants={room.participants.length} key={room.roomId} isUserInRoom={isUserInRoom} />
       ))}
     </MainContainer>
   );

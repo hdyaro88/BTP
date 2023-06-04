@@ -11,11 +11,11 @@ const Separator = styled("div")({
 });
 
 const DateLabel = styled("span")({
-  backgroundColor: "#36393f",
+  backgroundColor: "#ffffff",
   position: "absolute",
   left: "45%",
   top: "-10px",
-  color: "#b9bbbe",
+  color: "#6c44fc",
   padding: "0 5px",
   fontSize: "14px",
 });

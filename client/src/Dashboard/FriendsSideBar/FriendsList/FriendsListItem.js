@@ -31,7 +31,7 @@ const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
         style={{
           marginLeft: "7px",
           fontWeight: 700,
-          color: "#8e9297",
+          color: "#6c44fc",
         }}
         variant="subtitle1"
         align="left"

@@ -6,21 +6,13 @@ import MessengerContent from "./MessengerContent";
 
 const MainContainer = styled("div")({
   flexGrow: 1,
-  backgroundColor: "#36393f",
+  backgroundColor: "#6c44fc",
   marginTop: "48px",
   display: "flex",
 });
 
 const Messenger = ({ chosenChatDetails }) => {
-  return (
-    <MainContainer>
-      {!chosenChatDetails ? (
-        <WelcomeMessage />
-      ) : (
-        <MessengerContent chosenChatDetails={chosenChatDetails} />
-      )}
-    </MainContainer>
-  );
+  return <MainContainer>{!chosenChatDetails ? <WelcomeMessage /> : <MessengerContent chosenChatDetails={chosenChatDetails} />}</MainContainer>;
 };
 
 const mapStoreStateToProps = ({ chat }) => {

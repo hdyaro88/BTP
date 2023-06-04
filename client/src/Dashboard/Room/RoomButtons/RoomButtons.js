@@ -10,7 +10,7 @@ import { getActions } from "../../../store/actions/roomActions";
 const MainContainer = styled("div")({
   height: "15%",
   width: "100%",
-  backgroundColor: "#5865f2",
+  backgroundColor: "#6c44fc",
   borderTopLeftRadius: "8px",
   borderTopRightRadius: "8px",
   display: "flex",
@@ -23,7 +23,7 @@ const RoomButtons = (props) => {
 
   return (
     <MainContainer>
-      {/* {!isUserJoinedWithOnlyAudio && <ScreenShareButton {...props} />} */}
+      {!isUserJoinedWithOnlyAudio && <ScreenShareButton {...props} />}
       <MicButton localStream={localStream} />
       <CloseRoomButton />
       {!isUserJoinedWithOnlyAudio && <CameraButton localStream={localStream} />}

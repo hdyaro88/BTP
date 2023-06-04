@@ -7,7 +7,7 @@ const additionalStyles = {
   marginLeft: "5px",
   width: "80%",
   height: "30px",
-  background: "#3ba55d",
+  background: "#6c44fc",
 };
 
 const AddFriendButton = () => {
@@ -23,15 +23,8 @@ const AddFriendButton = () => {
 
   return (
     <>
-      <CustomPrimaryButton
-        additionalStyles={additionalStyles}
-        label="Add Friend"
-        onClick={handleOpenAddFriendDialog}
-      />
-      <AddFriendDialog
-        isDialogOpen={isDialogOpen}
-        closeDialogHandler={handleCloseAddFriendDialog}
-      />
+      <CustomPrimaryButton additionalStyles={additionalStyles} label="Add Friend" onClick={handleOpenAddFriendDialog} />
+      <AddFriendDialog isDialogOpen={isDialogOpen} closeDialogHandler={handleCloseAddFriendDialog} />
     </>
   );
 };
